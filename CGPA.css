@@ -1,0 +1,206 @@
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    font-family: 'arial';
+    }
+
+.image {
+    padding: 20px 0;
+}
+
+.image span {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    padding-right: 10px;
+    font-family: Arial;
+    font-weight: lighter;
+    font-size: 33px;
+}
+
+.image img{
+    position: relative;
+    top: 10px;
+    border-radius: 15px;
+    height: 100%;
+    width: 3rem;
+}
+ 
+.top{
+    text-align: center;
+    background-image: url(img/web\ bg.jpg);
+    box-shadow: 0px 0px 6px 10px rgb(194, 194, 194);
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+
+
+
+.next{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 40px;
+
+}
+
+
+.next table thead th{
+    font-weight: lighter;
+}
+.credit-load{
+     padding-left: 80px;
+}
+
+.Grade{
+    padding-left: 80px;
+}
+
+.button{
+    color: white;
+    background-color: brown;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 4px 2px;
+    border-radius: 8px;   
+}
+
+
+#course{
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 2px solid rgb(119, 119, 119);
+    cursor: pointer;
+}
+
+#credit{
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 2px solid rgb(119, 119, 119);
+    cursor: pointer;
+}
+
+#input{
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 2px solid rgb(119, 119, 119);
+    cursor: pointer;
+
+}
+        
+.calculate{
+    background-color: brown;
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    padding: 12px;
+    cursor: pointer;
+    /* margin: 4px 10%; */
+    margin-left: 10%;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
+}   
+.calculate:active {
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+}
+.image2{
+    padding-left: 120px;
+    transform: rotate(-10deg);
+}
+
+.third{
+    margin-left: 50%;
+}
+
+.result{
+    padding-top: 70px;
+    display: flex;
+}
+
+#CGPA{
+    padding-left: 10px;
+}
+
+/* BELOW 800px */
+@media (max-width:800px){
+    .image2{
+       display: none;
+    }
+
+    .image span {
+        font-size: 40px;
+    }
+
+    .top{
+    box-shadow: none;
+    border-radius: 0px;
+    }
+    .next{
+        margin-top: 20px;
+
+    }
+}
+
+    /* BELOW 500px */
+@media (max-width:500px){
+    .image span {
+        font-size: 25px;
+    }
+    
+    .image img {
+       width: 2.5rem;
+    }  
+    
+    #course{
+        border: 1px solid rgb(119, 119, 119);
+    }
+    
+    #credit{
+        border: 1px solid rgb(119, 119, 119);
+    }
+    
+    #input{
+        border: 1px solid rgb(119, 119, 119);
+    }
+}
+
+   /* BELOW 300px */
+@media (max-width:300px){
+    .image span {
+        font-size: 20px;
+    }
+
+    .image img {
+        width: 2rem;
+     }
+
+}
+
+
+/* ABOVE 1024 */
+
+@media (min-width:1000px){
+    .third{
+        margin-left:  40%;
+    }
+}
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
