@@ -3,6 +3,7 @@ const secondButton = document.getElementById('remove');
 
 
 const tableBody = document.querySelector('.table-body');
+
 const template = () => {
   const result = `
     <tr>
@@ -33,13 +34,18 @@ const template = () => {
   return result
 }
 
-firstButton.addEventListener("click", () =>{
+firstButton.addEventListener("click", (e) =>{
+  e.preventDefault()
   tableBody.innerHTML += template()
 });
 
 secondButton.addEventListener("click", () =>{
-  tableBody.removeChild(tableBody.lastChild)
+  if(tableBody) {
+    tableBody.removeChild(tableBody.lastChild)
+  }   
 });
+
+
 
 
 const calculateResult = document.getElementById('CGPA');
@@ -54,33 +60,52 @@ Button.addEventListener("click", () => {
   const creditLength = inputCredit.length;
   
   let newVariable = 0;
-        let newValue = 0;
+  let newValue = 0;
 
   for ( let i=0;  i < creditLength;  i++) 
   {   
     let creditValue = inputCredit[i].value
     let  grade = inputGrade[i].value;  
+    if (grade !== 0 && creditValue !== 0)  {
+      // if (grade === "A") {
+      //    grade =  5 * creditValue;
+      //   } 
+      // if (grade === "B") {
+      //    grade = 4 * creditValue;
+      //   }
+      // if (grade === "C") {
+      //    grade = 3 * creditValue;
+      //   }
+      // if (grade === "D") {
+      //    grade = 2 * creditValue;
+      //   }
+      // if (grade === "E") {
+      //    grade = 1 * creditValue;
+      //   }
+      // if (grade === "F") {
+      //    grade = 0 * creditValue;
 
-         if (grade !== 0 && creditValue !== 0)  {
-      if (grade === "A") {
-         grade =  5 * creditValue;
-        } 
-      if (grade === "B") {
-         grade = 4 * creditValue;
-        }
-      if (grade === "C") {
-         grade = 3 * creditValue;
-        }
-      if (grade === "D") {
-         grade = 2 * creditValue;
-        }
-      if (grade === "E") {
-         grade = 1 * creditValue;
-        }
-      if (grade === "F") {
-         grade = 0 * creditValue;
+      //   }
 
-        }
+      switch(grade) {
+        case "A":
+          grade =  5 * creditValue;
+          break;
+        case "B":
+          grade =  4 * creditValue;
+          break;
+        case "C":
+          grade =  3 * creditValue;
+          break;
+        case "D":
+          grade =  2 * creditValue;
+          break;
+        case "E":
+          grade =  1 * creditValue;
+          break;
+        default:
+          grade = 0 * creditValue;
+      }
 
        
         
@@ -97,7 +122,7 @@ Button.addEventListener("click", () => {
 
       calculateResult.textContent = 'Your CGPA is' + ' ' + product + ' ! '
       //calculateResult.textContent = "I'm ready man";
-      console.log(calculateResult) 
+      //console.log(calculateResult) 
  }
       if(grade == 0 || creditValue == 0) {
      return 
